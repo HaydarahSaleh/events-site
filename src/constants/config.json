@@ -1,0 +1,5 @@
+{
+  "API_URL_PREFIX": "/api",
+  "PRODUCTION": "https://rakex.infostrategic.com",
+  "DEVELOPMENT": "http://localhost:8799"
+}

@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+}
+
+html {
+  font-family: "Poppins";
+  /* overflow-x: hidden; */
+  height: 100%;
+}
+body {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-right: 0px !important;
+  padding: 0px !important;
+  font-family: "Poppins";
+}
+img {
+  max-width: 100%;
+}
+
+#root {
+  overflow-x: hidden;
+  flex: auto;
+  font-family: "Poppins";
+}
+
+button:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+div.MuiPopover-root div.MuiPaper-root {
+  border-radius: 5px;
+}
+
+div.MuiPopover-root div.MuiPaper-root ul li {
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 95%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #f2f2f2;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 19px;
+  color: #263661;
+}
+
+div.MuiPopover-root div.MuiPaper-root ul li:first-of-type {
+  margin-top: 10px;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px unset;
+  box-shadow: 0 0 0 30px unset;
+}
+
+::-webkit-scrollbar {
+  width: 0.8em;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #244B5A;
+  border-radius: 6px;
+  border: 2px solid #f9f9ff;
+}
+div.MuiPopover-root div.MuiPaper-root ul li {
+  background-color: white ;
+  text-transform: capitalize;
+}
+/* div.MuiDialog-paperWidthSm {
+  height: 50% !important;
+} */
+div.toolTipContainer {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 36px;
+}
+div.toolTip {
+  padding-top: 10px;
+  font-size: 14px;
+  display: flex;
+}
+div.toolTipData {
+  font-weight: 600 !important;
+  width: 33%;
+}
+.MuiDialog-container > .MuiPaper-root > .MuiDialogContent-root {
+  overflow: hidden;
+}
+.MuiDialog-paperWidthMd {
+  min-width: 960px;
+}
+@media print {
+  .image-to-print {
+    display: block;
+    height: 100%;
+  }
+}
+
+.imgViewerContainer .fade:not(.show) {
+  opacity: 1 !important;
+}

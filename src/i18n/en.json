@@ -1,0 +1,217 @@
+{
+  "translation": {
+    "HEADER": {
+      "LANGUAGE": "عربي",
+      "SETTINGS": "Settings",
+      "LOGIN": "Log In",
+      "SEARCH": "Search",
+      "LOGOUT": "log out",
+      "PROFILE": "Profile"
+    },
+
+    "TITLE": {
+      "INTRO": "DISTINCTIVE INTERNATIONAL ARAB FESTIVALS AWARDS",
+      "JOIN": "Come and Join",
+      "STRATEGICPLAN": "Strategic Plan",
+      "PHONE": "Phone number",
+      "WEB_SITE": "website",
+      "MEMORIES": "Display a collection of beautiful engagement photos and candid moments.",
+      "EVENTS": "Events",
+      "EVENTSTITLE": "Events and meetings",
+      "MEDIACENTER": "Media Center",
+      "ELECTRONICPARTICIPATION": "E-participation",
+      "STATISTICS": "Facts by Number",
+      "ARTICLES_SEARCHES": "Researches and Articles",
+      "NEWS": "News",
+      "survey": "Survey",
+      "searchResults": "Search Results",
+      "VIDEOS": "Video Gallery",
+      "PHOTOS": "Photos Gallery",
+      "PUBLICATION": "publications",
+      "QUESTIONNAIRES": "Survey",
+      "SUGGESTIONS": "Suggestions",
+      "POLLS": "Polls",
+      "PARTNERS": "Partners",
+      "PROGRAMM": "Awareness programs and campaigns",
+      "TRAINING": "  Professional training workshops",
+      "ACTIVITIES": "Activities and Events",
+      "CommitteeMembers": "Committee Members",
+      "RESET_PASSWORD": "Reset password",
+      "PROFILE": "Profile",
+      "MEDIA_CENTER": "Media Center",
+      "ARTICLES": " Articles",
+      "RESEARCHES_IN_PEACE": "Researches In Peace"
+    },
+    "BUTTON": {
+      "MORE": "More",
+      "SHOW": "Show All",
+      "RESULT": "View Results",
+      "VOTE": "Vote",
+      "SEND": "Send",
+      "PARTICIPATION": "Participation",
+      "SEARCH": "Search",
+      "SHARE": "Share",
+      "LOGIN": "Log In",
+      "BACK": "Back",
+      "RESET_PASSWORD": "Reset password",
+      "EDIT_PROFILE": "Edit profile",
+      "CANCEL": "Cancel",
+      "SAVE": "Save"
+    },
+    "DESCRIPTION": {
+      "STRATEGICPLAN": "In this context, the committee is working to implement a strategy based on main pillars :",
+      "DETAILS": "Details",
+      "CALENDAR": "Add to calendar",
+      "AWARENESS": "victims in 2015",
+      "POLLS": "Do you think the measures taken to combat human trafficking crimes are sufficient to protect victims and reclaim their rights"
+    },
+    "FOOTER": {
+      "update": "Website last update :",
+      "num": "Number of Visitors : ",
+      "dim": "1280*1024 for best site browsing Supports Microsoft Internet Explorer 0.11+, Firefox +0.35, Safari +1.5, Chrome +0.39 The screen resolution must be set"
+    },
+    "LABEL": {
+      "DAYS": "Days",
+      "HOUR": "Hour",
+      "MIN": "Minute",
+      "THANKS": "Thank You",
+      "TAIL": "© 2023 All rights reserved to the Forum for Promoting Peace in Muslim Societies",
+      "INSTA": "Follow us on Instagram",
+      "HAPPEN": "Happening Now",
+      "QUICKLINKS": "Quick links",
+      "CONF_PASSWORD": "Confirm Password",
+      "NAME": "Name",
+      "LOGO": "upload logo ",
+      "EMAIL": "Email",
+      "MESSAGE": "Message",
+      "NODATA": "There is No Data to Display.",
+      "YEAR": "Year",
+      "TITLE": "Title",
+      "PASSWORD": " Password",
+      "NEW_PASSWORD": "New password",
+      "CODE": "Code",
+      "NEWACCOUNT": "Don't have an account ? New account",
+      "FORGOTPASS": "Forgot your password?",
+      "REMEMBERME": "Remember Me",
+      "FROM": "From",
+      "TO": "To",
+      "TRYLATER": "Please try Again Later.",
+      "SENDSUCCESSFULLY": "Your Message was sent..We care about your opinion",
+      "RESPONSESENDSUCCESSFULLY": "Your Message was sent..We care about your opinion",
+      "SORRY": "Sorry",
+      "VOTEDBEFORE": "You have Voted Before for this page",
+      "PHONE": "Phone",
+      "POSITION_IN_NCCHT": "Position in nccht",
+      "ENTITY": "Entity",
+      "POSITION_IN_ENTITY": "Position in the entity",
+      "BRIEF": "Brief"
+    },
+    "SETTINGS": {
+      "FONT": "Change Font Size",
+      "COLORS": "Colors",
+      "NIGHTMODE": "Night Mode"
+    },
+    "ANSWER": {
+      "YES": "Yes, enough",
+      "NO": "Unsatisfying",
+      "SATISFYING": "Satisfying",
+      "IMPROVEMENT": "Need improvement",
+      "LOGIN": "Log in",
+      "LOGOUT": "log out",
+      "LANGUAGE": "عربي",
+      "SETTINGS": "Settings",
+      "SEARCH": "Search"
+    },
+    "BREADCRUMBS": {
+      "RATING": "Rate us"
+    },
+    "HELPFUL": {
+      "QUE": "Do you find this content helpful ?",
+      "YES": "yes",
+      "NO": "no",
+      "DIALOG": " Your Opinion and your feedback is important to us - how can we improve this page to help you better? please add your comments below with a contact method.",
+      "SUBMIT": "submit"
+    },
+    "BASICPAGE": {
+      "FILES": "files",
+      "LAST": "last",
+      "RELATED_LINKS": "Related links",
+      "NEWS": "News",
+      "SURVEY": "Survey",
+      "PHOTO_GALLERY": "Photo gallery",
+      "VIDEO_GALLERY": "Video gallery"
+    },
+    "NEWS": {
+      "TITLE": "news",
+      "BTN": "more",
+      "OTHER": "other news",
+
+      "TABLEHEAD": {
+        "NOTITLE": "No Title",
+        "YAER": "Year",
+        "SECTOR": "Sector",
+        "TITLE": "Title",
+        "SIZE": "Size",
+        "TYPE": "Type",
+        "COMMENTS": "Comments",
+        "DOWNLOADED": "Downloaded",
+        "RATING": "Rating",
+        "DOWNLOAD": "Download",
+        "PAGINATION": "Rows Per Page",
+        "OF": "of"
+      }
+    },
+    "EXITMESSAGE": {
+      "TITLE": "You are about to leave the site, Do you want to continue?",
+
+      "YES": "yes",
+      "NO": "no",
+      "OKAY": "ok"
+    },
+    "CONTACT_US": {
+      "CONTACT": " Contact with us",
+      "MARKED_1": " All fields marked with",
+      "MARKED_2": " are required",
+      "NAME": "Name",
+      "EMAIL": "e-mail",
+      "PHONE": " Phone",
+      "SUBJECT": "Subject",
+      "MESSAGE": "Message",
+      "PULLS": "What is your preferred method of receiving an answer to your inquiry?"
+    },
+    "PLAN": {
+      "EXPAND": "expand all",
+      "COLLAPSE": "collapse all"
+    },
+    "ERROR": {
+      "QUE": " PAGE NOT FOUND!",
+      "MASSAGE": "Sorry but the page you are looking for does not exist",
+      "BUTTON": "Home Page ",
+      "MASSAGE2": "You can go back to",
+      "LANGUAGEMASSAGE": "Sorry but the page you are looking for does not exis in this language"
+    },
+    "SOCIALMEDIA": {
+      "INSTA": "Instagram",
+      "FACE": "Facebook",
+      "Email": "Email",
+      "TOIL": "Toll free",
+      "CARE": "Customer care",
+      "WEB": "Website",
+      "TWITTER": "Twitter",
+      "PHONE": "Phone",
+      "YOUTUBE": "youTube"
+    },
+    "VALIDATION": {
+      "REQUIRED": "Required",
+      "INVALID_EMAIL": "Please insert valid E-mail"
+    },
+    "TOOLTIP": {
+      "CONTACT": "Contact us",
+      "CALL": "Call us",
+      "SHARE": "Share"
+    },
+    "HELPERTEXT": {
+      "IMAGEHELPERTEXT": "Image Extension : jpg,jpeg,png & Maximum Size : 25MB"
+    }
+  }
+}
