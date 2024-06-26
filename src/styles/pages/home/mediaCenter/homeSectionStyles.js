@@ -26,22 +26,6 @@ const useStyles = makeStyles((theme) => ({
           : `${theme.globals.fontFamily.en}!important`,
     },
     direction: `${theme?.direction}!important`,
-    [theme.breakpoints.down(1300)]: {
-      minHeight: "830px!important",
-      maxHeight: "830px!important",
-    },
-    [theme.breakpoints.down(1200)]: {
-      minHeight: "900px!important",
-      maxHeight: "900px!important",
-    },
-    [theme.breakpoints.down(900)]: {
-      minHeight: "830px!important",
-      maxHeight: "830px!important",
-    },
-    [theme.breakpoints.down(500)]: {
-      minHeight: "780px!important",
-      maxHeight: "780px!important",
-    },
 
     "& .slick-initialized .slick-slide": {
       display: "flex",
@@ -98,6 +82,31 @@ const useStyles = makeStyles((theme) => ({
               ? `${theme.globals.colors.field}!important`
               : `${theme.globals.colors.black}!important`,
         },
+        [theme.breakpoints.down(1200)]: {
+          left: "88%",
+        },
+        [theme.breakpoints.down(980)]: {
+          left: "85%",
+        },
+        [theme.breakpoints.down(750)]: {
+          left: "82%",
+        },
+        [theme.breakpoints.down(650)]: {
+          left: "80%",
+        },
+        [theme.breakpoints.down(520)]: {
+          width: 35,
+          height: 35,
+        },
+        [theme.breakpoints.down(450)]: {
+          left: "78%",
+        },
+        [theme.breakpoints.down(400)]: {
+          left: "75%",
+        },
+        [theme.breakpoints.down(350)]: {
+          left: "72%",
+        },
       },
       "& .next": {
         right: "3%",
@@ -116,6 +125,10 @@ const useStyles = makeStyles((theme) => ({
             theme.palette.type === "dark"
               ? `${theme.globals.colors.field}!important`
               : `${theme.globals.colors.white}!important`,
+        },
+        [theme.breakpoints.down(520)]: {
+          width: 35,
+          height: 35,
         },
       },
     },

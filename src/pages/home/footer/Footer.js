@@ -10,6 +10,7 @@ import { MdOutlineFacebook } from "react-icons/md";
 
 import { FaXTwitter } from "react-icons/fa6";
 import { BiLogoInstagramAlt } from "react-icons/bi";
+import { getElementByKey } from "../../../publicFunctions";
 
 function Footer({ menuItems, quickLinks, configurations }) {
   const classes = useStyles();
@@ -19,17 +20,12 @@ function Footer({ menuItems, quickLinks, configurations }) {
   const { t } = useTranslation();
 
   const HomeScreen = window.location.pathname === `/${lang}/home`;
-
+  console.log(configurations, "###configurations###");
   return (
     <Chapter maxWidth="xl">
       <Box className={classes.footerBox}>
         <Grid container className={classes.footerContainer}>
-          <Grid
-            item
-            lg={5}
-            className={classes.gridLink}
-            sx={{ border: "1px solid white" }}
-          >
+          <Grid item lg={5} md={5} sm={12} xs={12} className={classes.gridLink}>
             <Box className={classes.contactBox}>
               <Typography className={classes.mainTilte}>
                 {t("TITLE.JOIN")}
@@ -38,9 +34,15 @@ function Footer({ menuItems, quickLinks, configurations }) {
                 {t("TITLE.INTRO")}
               </Typography>
               <Box className={classes.socialBox}>
-                <MdOutlineFacebook className={classes.icon} />
-                <BiLogoInstagramAlt className={classes.icon} />
-                <FaTiktok className={classes.icon} />
+                <Link to={getElementByKey("FACE_BOOK", configurations)}>
+                  <MdOutlineFacebook className={classes.icon} />
+                </Link>
+                <Link to={getElementByKey("INSTAGRAM", configurations)}>
+                  <BiLogoInstagramAlt className={classes.icon} />
+                </Link>
+                <Link to={getElementByKey("TIK_TOK", configurations)}>
+                  <FaTiktok className={classes.icon} />
+                </Link>
               </Box>
               <Typography className={classes.copyrights}>
                 © 2023 THE ICONS -AWARDS. All Rights Reserved. With love by
@@ -48,29 +50,21 @@ function Footer({ menuItems, quickLinks, configurations }) {
               </Typography>
             </Box>
           </Grid>
-          <Grid
-            item
-            lg={4}
-            className={classes.gridLink}
-            sx={{ border: "1px solid blue" }}
-          >
+          <Grid item lg={4} md={4} sm={6} xs={12} className={classes.gridLink}>
             <Box className={classes.contactBox}>
               <Typography className={classes.head}>
                 {t("TITLE.MEDIA_CENTER")}
               </Typography>
-              <Typography className={classes.text}>+9714654654654</Typography>
+              <Typography className={classes.text}>
+                {getElementByKey("PHONE", configurations)}
+              </Typography>
               <Typography className={classes.head}>
                 {t("TITLE.MEDIA_CENTER")}
               </Typography>
               <Typography className={classes.text}>www.theicons.ae</Typography>
             </Box>
           </Grid>
-          <Grid
-            item
-            lg={3}
-            className={classes.gridLink}
-            sx={{ border: "1px solid red" }}
-          >
+          <Grid item lg={3} md={3} sm={6} xs={12} className={classes.gridLink}>
             <Box className={classes.imageBox}>
               <img src="/images/icon.png" />
             </Box>

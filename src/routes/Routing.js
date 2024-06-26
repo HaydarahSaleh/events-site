@@ -8,6 +8,7 @@ import {
   Suspense,
   lazy,
   memo,
+  useEffect,
   useRef,
   useState,
 } from "react";
@@ -39,15 +40,8 @@ function Routing() {
   const theme = isDark ? darkTheme(basicTheme) : makeTheme(basicTheme);
 
   const materialTheme = createTheme(theme);
-  const {
-    getDataMenus,
-    getAll,
-    homeLoaded,
-    getDataConf,
-    getDataSlider,
-    getDataPartners,
-    getNotifications,
-  } = actions;
+  const { getDataMenus, getAll, getDataConf, homeLoaded, getDataSlider } =
+    actions;
   const reducer = useSelector((state) => state);
   const [menuItems, setMenuItems] = useState([]);
   const [configurations, setConfigurations] = useState([]);
@@ -60,6 +54,88 @@ function Routing() {
   let lang = JSON.parse(localStorage.getItem("iconLang"))
     ? JSON.parse(localStorage.getItem("iconLang"))
     : "ar";
+  console.log(reducer, "#######REDUCERS######");
+
+  useEffect(() => {
+    if (!reducer?.homeLoading.homeLoaded) setToggleSpinner(true);
+    else setToggleSpinner(false);
+  }, [reducer?.homeLoading.homeLoaded]);
+
+  useEffect(() => {
+    if (!reducer.crud?.dataConfssReturned?.configurations?.length)
+      dispatch(
+        getDataConf({
+          sort: "configuration",
+        })
+      );
+  }, []);
+  useEffect(() => {
+    {
+      if (!reducer.crud?.dataMenusReturned?.menuItems?.length)
+        dispatch(getDataMenus({ sort: "menuItem" }));
+    }
+
+    if (!reducer?.crud?.dataSliderReturned?.posts?.length)
+      dispatch(
+        getDataSlider({
+          data: {
+            type: "sliders",
+          },
+          sort: "post",
+        })
+      );
+
+    if (!reducer?.crud?.allReturned?.image?.length)
+      dispatch(
+        getAll({
+          sort: "category",
+          data: {
+            type: "image",
+          },
+        })
+      );
+    if (!reducer?.crud?.allReturned?.about?.length)
+      dispatch(
+        getAll({
+          sort: "post",
+          data: {
+            type: "about",
+          },
+        })
+      );
+    if (!reducer?.crud?.allReturned?.events?.length)
+      dispatch(
+        getAll({
+          sort: "post",
+          data: {
+            type: "events",
+          },
+        })
+      );
+  }, []);
+  useEffect(() => {
+    if (
+      reducer?.crud?.dataSliderReturned?.posts &&
+      reducer?.crud?.allReturned?.events &&
+      reducer.crud?.dataMenusReturned?.menuItems &&
+      reducer.crud?.dataConfssReturned?.configurations
+    ) {
+      dispatch(
+        homeLoaded({
+          homeLoaded: true,
+        })
+      );
+    }
+  }, [
+    reducer?.crud?.allReturned?.events,
+    reducer.crud?.dataMenusReturned?.menuItems,
+    reducer.crud?.dataConfssReturned?.configurations,
+  ]);
+  useEffect(() => {
+    if (reducer?.crud?.dataConfssReturned?.configurations) {
+      setConfigurations(reducer?.crud?.dataConfssReturned?.configurations);
+    }
+  }, [reducer.crud?.dataConfssReturned?.configurations]);
 
   return (
     <StylesProvider jss={jss}>
@@ -87,9 +163,6 @@ function Routing() {
                 : "inherit",
           }}
         >
-          <FloatingButton
-            magazines={magazines.flatMap((item) => item?.childrens)}
-          />
           <Suspense fallback={<h1></h1>}>
             <Routes>
               <Route path={`/`} element={<Navigate replace to="/home" />} />
@@ -123,7 +196,7 @@ function Routing() {
                 }
               />
             </Routes>
-            <Footer />
+            <Footer configurations={configurations} />
           </Suspense>
           <ExitForm />
         </Paper>

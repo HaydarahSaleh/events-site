@@ -19,26 +19,31 @@ function EventCard(props) {
   let { image, item, path } = props;
   console.log(item);
 
-  useEffect(() => {
-    AOS.init({ duration: 2000, delay: 50 });
-    AOS.refresh();
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({ duration: 2000, delay: 50 });
+  //   AOS.refresh();
+
+  // }, []);
   let lang = JSON.parse(localStorage.getItem("iconLang"))
     ? JSON.parse(localStorage.getItem("iconLang"))
     : "ar";
   moment.locale(lang === "ar" ? "ar-sa" : lang === "fr" ? "fr" : "en-au");
 
   return (
-    <Card className={classes.card} data-aos="fade-up" data-aos-duration="1500">
+    <Card className={classes.card}>
       <CardMedia>
         <Box className={classes.imageBox}>
-          <img src={"/images/event-card.PNG"} alt={image?.alt} />
+          <img src={image} alt={image?.alt} />
+          {/* <img src={`/api/file/download/${image?.uuid}`} alt={image?.alt} /> */}
         </Box>
       </CardMedia>
       <CardContent>
-        <Typography className={classes.title}>Event</Typography>
+        <Typography className={classes.title}>{item?.title}</Typography>
         <Typography className={classes.date}>
           Thursday, 06 November 2023
+          {/* {moment(item?.privateDate)
+            .format("DD-MMM-YYYY")
+            .replace(/[٠-٩]/g, (y) => "٠١٢٣٤٥٦٧٨٩".indexOf(y))} */}
         </Typography>
       </CardContent>
     </Card>

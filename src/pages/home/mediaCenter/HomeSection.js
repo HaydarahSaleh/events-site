@@ -1,5 +1,5 @@
 import { Box, Grid, Typography } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
   MdOutlineKeyboardArrowLeft,
@@ -16,14 +16,11 @@ import useStyles from "../../../styles/pages/home/mediaCenter/homeSectionStyles"
 import HomeMediaCard from "../../../components/cards/galleryCard/HomeMediaCard";
 function Gallery() {
   const [data, setData] = useState([]);
-  const [value, setValue] = useState(0);
-  const [id, setId] = useState();
   const [sliderRef, setSliderRef] = useState(null);
   const navigate = useNavigate();
-  const { getAll } = actions;
   const classes = useStyles();
-  const dispatch = useDispatch();
-  const reducers = useSelector((state) => state);
+  const reducers = useSelector((state) => state?.crud?.allReturned?.image);
+
   const { t } = useTranslation();
   let lang = JSON.parse(localStorage.getItem("iconLang"))
     ? JSON.parse(localStorage.getItem("iconLang"))
@@ -31,7 +28,11 @@ function Gallery() {
   const {
     basicTheme: { isRTL },
   } = useSelector((state) => state.theme_reducer);
-
+  useEffect(() => {
+    if (reducers?.length) {
+      setData(reducers);
+    }
+  }, [reducers]);
   const ArrowLeft = ({ currentSlide, slideCount, ...props }) => (
     <button
       style={{ background: "red", border: 0 }}
@@ -62,7 +63,7 @@ function Gallery() {
     initialSlide: 1,
     slidesToShow:
       stateicDataToSearch?.length >= 3
-        ? 3
+        ? 4
         : stateicDataToSearch?.length === 2
         ? 2
         : stateicDataToSearch?.length,
@@ -87,19 +88,27 @@ function Gallery() {
       {
         breakpoint: 1200,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
       {
         breakpoint: 900,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 660,
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 0,
+        },
+      },
+      {
+        breakpoint: 520,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,

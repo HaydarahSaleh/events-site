@@ -176,3 +176,12 @@ export const testExpiredDate = (startTime, endTime) => {
   const startDate = new Date(startTime);
   return nowDate > finishDate && nowDate < startDate;
 };
+
+export const getElementByKey = (key, configurationData) => {
+  if (configurationData && configurationData?.length) {
+    const element = configurationData.find((el) =>
+      el?.key ? el.key === key : null
+    );
+    return element?.value;
+  }
+};

@@ -39,12 +39,37 @@ const useStyles = makeStyles((theme) => ({
       width: "340px!important",
       height: "490px!important",
     },
-    [theme.breakpoints.down(900)]: {
-      width: "280px!important",
-      height: "440px!important",
+    [theme.breakpoints.down(1100)]: {
+      width: "300px!important",
+      height: "450px!important",
     },
-    [theme.breakpoints.down(330)]: {
-      width: "250px!important",
+    [theme.breakpoints.down(980)]: {
+      width: "280px!important",
+      height: "420px!important",
+    },
+    [theme.breakpoints.down(920)]: {
+      width: "240px!important",
+      height: "380px!important",
+    },
+    [theme.breakpoints.down(800)]: {
+      width: "300px!important",
+      height: "450px!important",
+    },
+    [theme.breakpoints.down(750)]: {
+      width: "280px!important",
+      height: "420px!important",
+    },
+    [theme.breakpoints.down(650)]: {
+      width: "240px!important",
+      height: "380px!important",
+    },
+    [theme.breakpoints.down(450)]: {
+      width: "240px!important",
+      height: "350px!important",
+    },
+    [theme.breakpoints.down(350)]: {
+      width: "220px!important",
+      height: "300px!important",
     },
 
     "& .MuiCardMedia-root": {

@@ -33,20 +33,34 @@ const useStyles = makeStyles((theme) => ({
       alignItems: "center",
       padding: 10,
     },
-    [theme.breakpoints.down(1300)]: {
-      width: "300px!important",
-      height: "440px!important",
+
+    [theme.breakpoints.down(1220)]: {
+      width: "320px!important",
+      height: "200px!important",
     },
-    [theme.breakpoints.down(1200)]: {
-      width: "340px!important",
-      height: "490px!important",
+    [theme.breakpoints.down(1070)]: {
+      width: "360px!important",
+      height: "200px!important",
     },
-    [theme.breakpoints.down(900)]: {
+
+    [theme.breakpoints.down(840)]: {
+      width: "320px!important",
+      height: "200px!important",
+    },
+    [theme.breakpoints.down(750)]: {
       width: "280px!important",
-      height: "440px!important",
+      height: "175px!important",
     },
-    [theme.breakpoints.down(330)]: {
-      width: "250px!important",
+    [theme.breakpoints.down(665)]: {
+      width: "360px!important",
+      height: "200px!important",
+    },
+    [theme.breakpoints.down(450)]: {
+      width: "280px!important",
+      height: "175px!important",
+    },
+    [theme.breakpoints.down(350)]: {
+      height: "160px!important",
     },
   },
   imageBox: {
@@ -61,6 +75,11 @@ const useStyles = makeStyles((theme) => ({
   title: {
     color: `${theme.globals.colors.black}!important`,
     fontSize: `${theme.globals.fontSize.m}px!important`,
+    display: "-webkit-inline-box",
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+    WebkitBoxOrient: "vertical",
+    WebkitLineClamp: "1",
   },
   date: {
     color: `${theme.globals.colors.gray}!important`,

@@ -37,16 +37,46 @@ const useStyles = makeStyles((theme) => ({
       width: "300px!important",
       height: "440px!important",
     },
-    [theme.breakpoints.down(1200)]: {
-      width: "340px!important",
-      height: "490px!important",
-    },
-    [theme.breakpoints.down(900)]: {
+    [theme.breakpoints.down(1270)]: {
       width: "280px!important",
-      height: "440px!important",
+      height: "400px!important",
     },
-    [theme.breakpoints.down(330)]: {
-      width: "250px!important",
+
+    [theme.breakpoints.down(1200)]: {
+      width: "240px!important",
+      height: "360px!important",
+    },
+    [theme.breakpoints.down(1050)]: {
+      width: "220px!important",
+      height: "320px!important",
+    },
+    [theme.breakpoints.down(960)]: {
+      width: "200px!important",
+      height: "300px!important",
+    },
+    [theme.breakpoints.down(680)]: {
+      width: "240px!important",
+      height: "360px!important",
+    },
+    [theme.breakpoints.down(600)]: {
+      width: "220px!important",
+      height: "320px!important",
+    },
+    [theme.breakpoints.down(500)]: {
+      width: "200px!important",
+      height: "300px!important",
+    },
+    [theme.breakpoints.down(450)]: {
+      width: "240px!important",
+      height: "360px!important",
+    },
+    [theme.breakpoints.down(400)]: {
+      width: "220px!important",
+      height: "320px!important",
+    },
+    [theme.breakpoints.down(350)]: {
+      width: "200px!important",
+      height: "300px!important",
     },
   },
   imageBox: {
